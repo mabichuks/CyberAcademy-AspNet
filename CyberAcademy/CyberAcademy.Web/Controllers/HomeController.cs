@@ -25,11 +25,11 @@ namespace CyberAcademy.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var claimsPrincipal = this.User.Identity as ClaimsIdentity;
+            //var claimsPrincipal = this.User.Identity as ClaimsIdentity;
 
-           var claim = claimsPrincipal.FindFirst("PassportUrl");
+          // var claim = claimsPrincipal.FindFirst("PassportUrl");
 
-            ViewBag.ProfileUrl = claim.Value;
+           // ViewBag.ProfileUrl = claim.Value;
             ViewData["SalesAnalyticsCaptions"] = "Sales Analytics";
             ViewBag.Contacts = _contactMgr.GetContacts();
             return View();
